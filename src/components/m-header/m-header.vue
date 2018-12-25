@@ -1,0 +1,36 @@
+<template>
+  <div class="m-header">
+    <div class="icon"></div>
+    <h1 class="text">Merry christmas </h1>
+  </div>
+</template>
+
+<style lang="stylus" scoped>
+@import '~common/stylus/variable';
+@import '~common/stylus/mixin';
+
+.m-header {
+  position: relatuve;
+  height: 44px;
+  text-align: center;
+  color: $color-theme;
+
+  .icon {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 6px;
+    width: 30px;
+    height: 32px;
+    margin-right: 9px;
+    bg-image('logo');
+    background-size: 30px 32px;
+  }
+
+  .text {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 44px;
+    font-size: $font-size-large;
+  }
+}
+</style>
