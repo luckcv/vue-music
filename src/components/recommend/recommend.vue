@@ -8,8 +8,7 @@
           <div v-for="item in recommends"
                :key="item.id">
             <a :href="item.linkUrl">
-              <img :src="item.picUrl"
-                   alt="">
+              <img :src="item.picUrl">
             </a>
           </div>
         </slider>
