@@ -13,22 +13,19 @@
     </div>
   </div>
 </template>
-<script>
+
+<script type="text/ecmascript-6">
 import { addClass } from 'common/js/dom'
 import BScroll from 'better-scroll'
+
 export default {
-  data () {
-    return {
-      dots: [],
-      currentPageIndex: 0
-    }
-  },
+  name: 'slider',
   props: {
     loop: {
       type: Boolean,
       default: true
     },
-    autoplay: {
+    autoPlay: {
       type: Boolean,
       default: true
     },
@@ -37,13 +34,19 @@ export default {
       default: 4000
     }
   },
+  data () {
+    return {
+      dots: [],
+      currentPageIndex: 0
+    }
+  },
   mounted () {
     setTimeout(() => {
       this._setSliderWidth()
       this._initDots()
       this._initSlider()
 
-      if (this.autoplay) {
+      if (this.autoPlay) {
         this._play()
       }
     }, 20)
@@ -130,7 +133,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style scoped lang="stylus" rel="stylesheet/stylus">
 @import '~common/stylus/variable';
 
 .slider {
